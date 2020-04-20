@@ -1,0 +1,8 @@
+Use own xlsx2csv pyuno based logic, cleaned up plots
+
+As xlsx2csv program not available in Fedora, so implemented
+my own logic using pyuno and libreoffice (as these two packages
+are available in fedora).
+
+Cleaned up the plot by enabling tight layout and added the
+data source info.

@@ -1,0 +1,6 @@
+Dictionary of Covid Data is now passed as required
+
+Previously I was access the covid data directly from the global dictionary.
+Now instead the dictionary is passed across the required functions.
+
+

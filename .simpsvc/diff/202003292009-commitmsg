@@ -1,0 +1,10 @@
+GB to UK, Relative2Pop, Cases & Death as % of Pop
+
+WHile creating the CC3 to CC2 table for country codes, replace
+GB with UK for united kingdom.
+
+Added a logic which calculates given data to be relative to the
+given country's population.
+
+Print Cumulative Cases and Deaths as % of Pop
+

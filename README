@@ -1,0 +1,28 @@
+
+# The Covid data analysis logic
+
+It allows downloading of eu's daily geographic covid data.
+
+Inturn it allows the same to be plotted for a given period
+of dates and for a given set of countries, from different 
+angles like
+
+  "Cases"           : Number of cases
+  "CasesMovAvg"     : Moving average of cases (default 7 days)
+  "CasesRelative"   : Cases relative to its Total (specific to each country)
+  "CasesMovAvgPlus" : Cases & Moving average of cases
+  "CasesLog"        : Cases plotted in log scale
+  "CasesCumu"       : Number of cases cumulated over given period
+  "CasesDelta"      : Plot delta of cases
+  "Death"           : Number of dead
+  "DeathMovAvg"     : Moving avg of deaths (default 7 days)
+  "DeathCumu"       : Number of deaths cumulated over given period
+  "DeathPlus"       : Death and DeatCumu
+  "MortalityRate"   : Mortality rate
+
+  "CasesBox"        : Box plot of Cases across all specified countries
+  "DeathBox"        : Box plot of Deaths across all specified countries
+
+It also loads population info for each country from a given
+set of csv files corresponding to country codes & population
+

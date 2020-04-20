@@ -1,0 +1,11 @@
+fill_needed_data informative and now used WIP01
+
+Print Country specific data from within fill_needed_data, so
+that it is printed for each country only once (bcas, f_n_d
+will extract the country specific data only once in a given
+run).
+
+plot_what updated to use fill_needed_data.
+
+NOTE: This is a work in progress 1st attempt
+

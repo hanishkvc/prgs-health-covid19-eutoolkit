@@ -1,0 +1,4 @@
+sRange info could vary from country to country, so handle it
+
+sRange tells from which date to which date, data is available.
+

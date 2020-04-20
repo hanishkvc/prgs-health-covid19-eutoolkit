@@ -1,0 +1,10 @@
+Fixed the issue with Grid not appearing for Single mode
+
+Rather the pyplot's grid func toggles grid display, if no argument
+is given. As previously I was not explicitly passing any arg, by
+chance the number of calls to plot and inturn grid was such that
+it was toggling the grid to off.
+
+Now I have fixed this by explicitly passing True to grid func.
+
+

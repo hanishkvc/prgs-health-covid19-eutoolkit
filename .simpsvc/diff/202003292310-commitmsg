@@ -1,0 +1,9 @@
+Fix a oversight wrt calling fill_needed_data
+
+Had forgotten to pass the geoId as part of list and not
+directly.
+
+Also in fill_needed_data, I was wrongly setting dD2 to a
+empty dictionary, even when the caller had passed a dict,
+this has been fixed now.
+

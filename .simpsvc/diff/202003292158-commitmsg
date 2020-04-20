@@ -1,0 +1,16 @@
+Explicit plot matrix, BoxPlot Cases & CasesRel2Pop
+
+Now one can explicitly specify the subplots matrix to plot_what,
+instead of letting the internal logic decide based on number of
+features and countries being plotted parallely. This helps, if
+we want to plot multiple plots for the same feature tag.
+
+TODO: Need to change logic, so that getting required data is
+decoupled from the plot logic.
+
+BoxPlot logic updated to plot both cases as well as cases
+relative to the population, so that one can compare how each
+country is fairing in absolute sense, as well as wrt its own
+population.
+
+

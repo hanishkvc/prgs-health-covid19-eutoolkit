@@ -1,0 +1,10 @@
+TimeStamped Images, fig size adjustment, CasesMovAvg(Rel) print
+
+Now the saved plots are timestamped, so they dont overwrite one
+another.
+
+Fig size instead of being adapted based on number of countries
+and number of features being plotted, is now fixed.
+
+CasesMovAvg and CasesMovAvgRel is printed.
+

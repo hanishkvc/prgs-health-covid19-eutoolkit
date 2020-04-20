@@ -1,0 +1,9 @@
+FigSize calculation updated, Grid for BoxPlots
+
+Have redone the fig size calculations, so that they are more
+sane, and also the relavent logic is next to deciding factors.
+
+Added grid to box plots.
+
+TODO: Have to check why in single plot mode, the grid is not
+appearing.

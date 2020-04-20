@@ -1,0 +1,9 @@
+Use fill_needed_data WIP2 plot_what usage updated
+
+All uses of plot_what now take dD2 and inturn the returned dD2
+is inturned saved into dD2.
+
+do_plots & do_boxplot also updated suitably.
+
+TODO: sRange usage I think I have to update.
+

@@ -1,0 +1,7 @@
+Ignore invalid dates generated, Log missing data warning
+
+WHen the simple dumb logic generates invalid dates like 30-Feb 
+or 31-Feb or 31-Apr or so, it will be skipped automatically now.
+
+Also log missing death data warning, for any given day in the
+range of dates being checked.

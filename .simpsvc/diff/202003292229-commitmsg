@@ -1,0 +1,19 @@
+fill_needed_data function created to avoid reloading
+
+Am assuming the machine where the logic will run will have
+enough memory, so filling / extracting all needed data for 
+all specified countries into memory and inturn kept in
+memory.
+
+The Idea,
+
+For the different plots, if a given country or set of countries 
+is being looked at again, then it will use the data which is 
+already loaded | filled in memory, instead of extracting it again
+from the main | root dictionary(dD).
+
+Inturn the 2nd level dictionary dD2 is returned by this func. 
+
+Also have removed some old subplots calls, which was no longer
+being used.
+

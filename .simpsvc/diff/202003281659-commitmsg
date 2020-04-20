@@ -1,0 +1,27 @@
+Functions explained 
+
+# Basic info about Initial commit of covid data analysis logic
+
+It allows downloading of eu's daily geographic covid data.
+
+Inturn it allows the same to be plotted for a given period
+of dates and for a given set of countries, from different 
+angles like 
+  "Cases" : Number of cases
+  "Death" : Number of dead
+  "Mortality" : Mortality rate
+  "CasesCumu" : Number of cases cumulated over given period
+  "DeathCumu" : Number of deaths cumulated over given period
+
+It also loads population info for each country from a given
+set of csv files corresponding to country codes & population
+
+# this commit
+
+Have added explanations for some of the logics / functions
+defined in the program.
+
+Have renamed some functions as now the program as logic
+for working with covid, country-code and population
+datasets.
+

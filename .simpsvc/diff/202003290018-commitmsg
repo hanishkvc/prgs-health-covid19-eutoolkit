@@ -1,0 +1,18 @@
+Cleanup Country Population logic
+
+Renamed some variables to be more self explanatory (tCC3, tYear).
+
+Create a seperate dictionary of 2010 population data.
+
+Identify the latest year for which population data is available,
+for each country in the dataset. Later this can be used to
+generate the population dictionary of countries with its latest
+population info. 
+
+However as dCPLatest would have info for different countries for
+different years in this case, we are currently not generated such
+a dictionary, as its not easily comparable across countries for
+relative studies. So instead 2010 specific population data is
+what is used for relative studies. Inturn same is what is printed
+instead of all the country population data across years.
+
