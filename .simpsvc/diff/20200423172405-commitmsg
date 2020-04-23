@@ -1,0 +1,7 @@
+geoId field name updated to match same in eu covid data file
+
+This is required, because now the logic tries to auto fix the field
+index based on the field name. Needed to take care of situations
+where eu may change the field positions (As occured sometime last
+week once).
+
