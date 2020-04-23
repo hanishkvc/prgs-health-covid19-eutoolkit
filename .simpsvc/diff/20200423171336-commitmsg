@@ -1,0 +1,14 @@
+update default field mapping based on header in csv
+
+Added logic to _load_csv, to optionally try and update the field index 
+mapping based on header line in the given csv file.
+
+This is triggered only if the line number (starting with 0) of the csv
+header line is given to the function. This requires to be part of the
+lines which are skipped at the beginning, before the actual data is 
+processed in the file.
+
+eu covid import function updated to use this logic, because it has been
+found that eu team has updated the columns/fields in the xlsx file,
+by adding some new fields in the middle.
+
