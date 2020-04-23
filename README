@@ -26,3 +26,7 @@ angles like
 It also loads population info for each country from a given
 set of csv files corresponding to country codes & population
 
+## TODO
+
+Change to using numpy maybe!
+

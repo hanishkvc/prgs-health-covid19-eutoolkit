@@ -1,0 +1,10 @@
+--- .simpsvc/copy/README	2020-03-29 08:05:08.000000000 +0530
++++ .simpsvc/cache/README	2020-04-23 17:34:16.494130031 +0530
+@@ -26,3 +26,7 @@
+ It also loads population info for each country from a given
+ set of csv files corresponding to country codes & population
+ 
++## TODO
++
++Change to using numpy maybe!
++
