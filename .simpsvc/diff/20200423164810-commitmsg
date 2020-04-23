@@ -1,0 +1,3 @@
+Save to data folder, renamed dict key to deaths to match eu data header
+
+TODO: Also will be using header to cross check column mapping is fine.
