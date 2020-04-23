@@ -43,7 +43,7 @@ def _download_data_xlsts(d,m,y):
     if bDownload:
         if os.system("wget -c {} --output-document=data/{}".format(url, xls)) != 0:
             return False
-    convert_xls2csv(xls, csvCovid)
+    convert_xls2csv("data/{}".format(xls), csvCovid)
     print(url)
     return True
 
