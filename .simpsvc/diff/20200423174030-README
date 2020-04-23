@@ -1,0 +1,12 @@
+--- .simpsvc/copy/README	2020-04-23 17:34:46.593727139 +0530
++++ .simpsvc/cache/README	2020-04-23 17:40:13.821500498 +0530
+@@ -30,3 +30,9 @@
+ 
+ Change to using numpy maybe!
+ 
++## NOTE
++
++This was developed with my simpsvc acting as the version control logic
++mainly. So all the initial history can be got by looking into .simpsvc
++folder or by using my simpsvc program.
++
