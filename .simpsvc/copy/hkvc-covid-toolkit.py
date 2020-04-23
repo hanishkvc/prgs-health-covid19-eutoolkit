@@ -16,6 +16,13 @@ urlsch="https://www.ecdc.europa.eu/sites/default/files/documents/{}"
 csvCovid="/tmp/covid.csv"
 
 
+
+def convert_xls2csv(xls, csv):
+    #os.system("xlsx2csv {} > {}".format(xls,csvCovid))
+    return os.system("./helpers/hkvc_pyuno_toolkit/hkvc_pyuno_toolkit.py ss2csv {} {}".format(xls,csv))
+
+
+
 def _download_data_xlsts(d,m,y):
     """ timestamped xls file download.
         Given the Day, Month & Year, create the url for xlsx file
@@ -36,9 +43,10 @@ def _download_data_xlsts(d,m,y):
     if bDownload:
         if os.system("wget -c {}".format(url)) != 0:
             return False
-    os.system("./hkvc_pyuno_toolkit.py ss2csv {} {}".format(xls,csvCovid))
+    convert_xls2csv(xls, csvCovid)
     print(url)
     return True
+
 
 
 def download_data_ts(d=None, m=None, y=2020):
@@ -560,7 +568,7 @@ def plot_what(dD, dD2, geoIds = ['IN', 'UK', 'CN'], dataTypes = [ "Cases", "Case
     if sTitle != None:
         plt.title(sTitle)
     ts = time.strftime("%Y%m%d%H%M%S")
-    fig.text(0.01, 0.98, "Data: Europa.EU Covid Consolidated, hkvc")
+    fig.text(0.01, 0.99, "Data: Europa.EU Covid Consolidated, {}, hkvc".format(sRange.replace(geoId,"")))
     fig.set_tight_layout(True)
     sImgFile = "/tmp/{}-covid.png".format(ts)
     fig.savefig(sImgFile, bbox_inches="tight")
@@ -571,12 +579,15 @@ def plot_what(dD, dD2, geoIds = ['IN', 'UK', 'CN'], dataTypes = [ "Cases", "Case
     return dD2
 
 
-download_data_ts()
+if sys.argv[1] == "download":
+    download_data_ts()
+else:
+    convert_xls2csv(sys.argv[1], csvCovid)
 dD = load_csv_eucovid()
 #print(dD)
-dCC = load_csv_cc(sys.argv[1])
+dCC = load_csv_cc(sys.argv[2])
 input("CountryCodes: {}\nPress any key...".format(dCC))
-dCP,dCP2010 = load_csv_pop(sys.argv[2])
+dCP,dCP2010 = load_csv_pop(sys.argv[3])
 input("CountryPopulation:2010: {}\nPress any key...".format(dCP2010))
 dD2 = None
 
@@ -608,7 +619,7 @@ def do_plots(dD, dD2):
 
 def do_boxplot(dD, dD2):
     geoIds = [ 'IN', 'CA', 'UK' ]
-    geoIds = [ 'IN', 'CA', 'UK', 'ES', 'FR', 'US', 'IT', 'CN' ]
+    geoIds = [ 'IN', 'CA', 'UK', 'IE', 'AE', 'ES', 'FR', 'US', 'IT', 'CN' ]
     dataTypes = [ "CasesBox" ]
     #plot_what(dD, geoIds, dataTypes, iDS, iMS, iDE, iME, bSingle=True, sTitle="Cases/Day")
     dD2 = plot_what(dD, dD2, geoIds, dataTypes, iDS, iMS, iDE, iME, bSingle=True, iPltRows=2, iPltCols=1)
@@ -624,3 +635,5 @@ input("From: 2020-{}-{} to 2020-{}-{}, press any key to continue...".format(iMS,
 dD2 = do_plots(dD, dD2)
 dD2 = do_boxplot(dD, dD2)
 
+
+# vim: set softtabstop=4 expandtab: #

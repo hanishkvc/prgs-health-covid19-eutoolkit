@@ -1,0 +1,3 @@
+[submodule "helpers/hkvc_pyuno_toolkit"]
+	path = helpers/hkvc_pyuno_toolkit
+	url = https://github.com/hanishkvc/prgs-libreoffice-pyuno_toolkit.git
