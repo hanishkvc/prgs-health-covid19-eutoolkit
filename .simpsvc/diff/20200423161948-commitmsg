@@ -1,0 +1,9 @@
+Moved xlsx2csv conv to a func, work with passed covid xlsx file
+
+Now user can either pass the eu covid xlsx file or specify download.
+If download is specified, then latest eu covid data file is downloaded.
+
+To help with above as well as for better code flow and organisation,
+refactored the call related to conversion into a new function.
+
+
